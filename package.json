@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "lodash": "^3.10.1",
+    "pksim": "0.0.0",
     "react": "^0.13.3",
     "react-d3": "^0.3.1"
   }
