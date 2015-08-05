@@ -10,28 +10,22 @@ var App = React.createClass({
 	  var seq = [];
 		var doses = [];
 		var doseTimes = [];
+		var sim = [];
+		var lastAmt = 0;
+		var simInterval;
 
 		for (var i = 0; i < (numDoses*ii+24); i++) {
 			seq.push(i);
 		}
-
-
 		for (var i = 0; i < numDoses; i++) {
 			doses.push(amt);
 			doseTimes.push(i*ii);
 		}
 
-	//console.log({seq, doses, doseTimes});
-
 		var reg = {doses: doses, times: doseTimes};
 		var regimen = pksim.sampleIntervals(reg, seq);
 
-		var sim = [];
-		var lastAmt = 0;
-		var simInterval;
 		for(var i = 0; i < regimen.length; i++) {
-			console.log(regimen[i]);
-		console.log("(regimen[i].dose + lastAmt): " + (regimen[i].dose + lastAmt));
 			simInterval = pksim.onecmptiv(cl, v, (regimen[i].dose + lastAmt), regimen[i].time);
 			lastAmt = simInterval[simInterval.length-1].y*v;
 			for(var j in simInterval) {
