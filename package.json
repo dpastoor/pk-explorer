@@ -2,7 +2,7 @@
   "name": "pk-explorer",
   "version": "0.0.0",
   "description": "explorer for pharmacokinetics",
-  "main": "bundle/index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src",

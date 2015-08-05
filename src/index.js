@@ -42,11 +42,11 @@ var App = React.createClass({
 	},
 	getInitialState: function() {
 		return {
-			numDoses: [],
-			amt: [],
-			ii: [],
-			cl: [],
-			vd: [],
+			numDoses: 10,
+			amt: 1000,
+			ii: 24,
+			cl: 10,
+			vd: 100,
       data: [this.concTimeArray(10, 100, 1000, 10, 24, "Reference"),
 			this.concTimeArray(10, 100, 1000, 10, 24, "New ID")]
 		};
