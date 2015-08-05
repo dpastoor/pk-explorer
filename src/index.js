@@ -47,7 +47,7 @@ var App = React.createClass({
 			ii: 24,
 			cl: 10,
 			vd: 100,
-      data: [this.concTimeArray(10, 100, 1000, 10, 24, "Reference"),
+      data: [this.concTimeArray(10, 100, 1000, 5, 24, "Reference"),
 			this.concTimeArray(10, 100, 1000, 10, 24, "New ID")]
 		};
 	},
@@ -58,7 +58,7 @@ var App = React.createClass({
 			ii: this.refs.ii.refs.inp.getDOMNode().value,
 			cl: this.refs.cl.refs.inp.getDOMNode().value,
 			vd: this.refs.vd.refs.inp.getDOMNode().value,
-			data: [this.concTimeArray(10, 100, 1000, 10, 24, "Reference"),
+			data: [this.concTimeArray(10, 100, 1000, 5, 24, "Reference"),
 						this.concTimeArray(Number(this.refs.cl.refs.inp.getDOMNode().value),
 													Number(this.refs.vd.refs.inp.getDOMNode().value),
 			 										Number(this.refs.amt.refs.inp.getDOMNode().value),
@@ -114,8 +114,8 @@ var SomeComponent = React.createClass({
 						<LineChart
 			  				legend={true}
                 data={this.props.data}
-                width={800}
-                height={400}
+                width={1200}
+                height={700}
             />
           </div>
         );
